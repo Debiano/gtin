@@ -1,5 +1,5 @@
 {
-    "name": "mvdnbrk/gtin",
+    "name": "debiano/gtin",
     "description": "GTIN / EAN / UPC Validation for Laravel",
     "keywords": [
         "laravel",
