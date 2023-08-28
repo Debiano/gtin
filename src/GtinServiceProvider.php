@@ -12,7 +12,7 @@ class GtinServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'gtin');
+        $this->loadTranslationsFrom(__DIR__.'/../lang', 'gtin');
 
         Validator::extend('gtin', function ($attribute, $value) {
             return GtinValidator::isGtin($value);
@@ -37,7 +37,7 @@ class GtinServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/gtin'),
+                __DIR__.'/../lang' => resource_path('lang/vendor/gtin'),
             ], 'gtin-lang');
         }
     }
